@@ -1,0 +1,11 @@
+Phase 5 – Conclusion
+
+    This penetration testing assessment of a Metasploitable2-based SME environment revealed critical vulnerabilities across multiple
+services, including FTP, Telnet, and Samba. Several successful exploits were performed, leading to full shell access, password
+hash extraction, and privilege escalation.
+
+    The use of weak passwords, outdated software, and exposed services significantly increased the system's attack surface. Recommendations 
+have been provided to mitigate these issues in line with OWASP, CIS, and NIST security best practices.
+
+    Routine penetration testing, continuous patching, and strong authentication policies are essential to maintaining system integrity 
+and protecting sensitive business operations.
