@@ -1,27 +1,29 @@
-This report presents the results of a professional penetration testing engagement carried out in a controlled lab environment using Metasploitable2, a purposely vulnerable virtual machine designed for ethical hacking practice. The aim was to simulate an attack on a small business network, identify security weaknesses, exploit critical vulnerabilities, and provide remediation recommendations.
+This report presents the results of a professional penetration testing engagement carried out in a controlled lab environment using Metasploitable2, a purposely 
+vulnerable virtual machine designed for ethical hacking practice. The aim was to simulate an attack on a small business network, identify security weaknesses, exploit
+critical vulnerabilities, and provide remediation recommendations.
 
 Objectives:
 
-Conduct reconnaissance to identify active services and potential entry points
-
-Exploit discovered vulnerabilities to gain unauthorized access
-
-Perform post-exploitation tasks to evaluate system impact
-
-Recommend mitigations to prevent real-world exploitation
+      Conduct reconnaissance to identify active services and potential entry points
+      
+      Exploit discovered vulnerabilities to gain unauthorized access
+      
+      Perform post-exploitation tasks to evaluate system impact
+      
+      Recommend mitigations to prevent real-world exploitation
 
 
 Tools Used:
 
-Nmap
-
-Metasploit Framework
-
-Telnet
-
-John the Ripper
-
-SCP
-
-Netcat
+      Nmap
+      
+      Metasploit Framework
+      
+      Telnet
+      
+      John the Ripper
+      
+      SCP
+      
+      Netcat
 
