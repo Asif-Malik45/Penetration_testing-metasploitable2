@@ -1,0 +1,23 @@
+|------------------------------------------------------------------------------------------------------|
+| Area              |                        Recommendation                                 | Priority |
+|------------------------------------------------------------------------------------------------------|
+| Telnet            |        Disable Telnet. Use SSH with key-based auth.                   | High     |
+|                   |                                                                       |          |
+| FTP               |   Upgrade vsFTPd or replace with SFTP. Remove v2.3.4 completely.      | High     |
+|                   |                                                                       |          |
+| Samba             |   Patch Samba and disable guest access. Remove usermap scripting.     | High     |
+|                   |                                                                       |          |
+| Passwords         |    Enforce strong password policy. No default/reused credentials.     | High     |
+|                   |                                                                       |          |
+| Web Server CGI    |  Disable unused CGI scripts. Sanitize input. Use modern frameworks.   | High     |
+|                   |                                                                       |          |
+| MySQL             |      Set strong root password. Limit remote access to localhost.      | Medium   |
+|                   |                                                                       |          |
+| OS Hardening      |         Upgrade from Ubuntu 8.04. Patch kernel (DirtyCow).            | Critical |
+|                   |                                                                       |          |
+| Firewall          |        Enable UFW. Only allow required ports (e.g., 22, 80).          | High     |
+|                   |                                                                       |          |
+| Monitoring        |           Install fail2ban, OSSEC. Enable detailed logging.           | Medium   |
+|                   |                                                                       |          |
+| User Accounts     |         Remove unused users (e.g., postgres, service, etc.).          |  High    |
+--------------------------------------------------------------------------------------------------------
