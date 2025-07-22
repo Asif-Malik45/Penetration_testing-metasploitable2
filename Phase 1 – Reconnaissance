@@ -1,0 +1,77 @@
+ Phase 1 – Reconnaissance and Target Analysis
+
+Objective:
+
+The reconnaissance phase aimed to identify live hosts, open ports, running services, and potential vulnerabilities in the target machine. This foundational step is crucial for building an effective exploitation strategy.
+
+Step-by-Step Process:
+
+1. Network Configuration:
+
+Both Metasploitable2 and Kali Linux were set to use "Host-Only Adapter" networking to ensure they could communicate in an isolated lab environment.
+
+
+
+2. IP Discovery:
+
+On Metasploitable2, the IP address was identified using:
+
+ifconfig
+
+The IP found was 192.168.56.102
+
+
+
+3. Ping Sweep:
+
+A ping scan was performed using Nmap to confirm the target was alive:
+
+nmap -sn 192.168.56.0/24
+
+
+
+4. Port and Service Scan:
+
+A full TCP port scan and version detection was executed:
+
+nmap -sS -sV -p- 192.168.56.102
+
+This revealed multiple open ports and services:
+
+FTP (Port 21)
+
+SSH (Port 22)
+
+Telnet (Port 23)
+
+HTTP (Port 80)
+
+Samba (Ports 139 & 445)
+
+MySQL (Port 3306)
+
+5. Service Enumeration:
+
+Version detection revealed vulnerable services like:
+
+vsFTPd 2.3.4 (backdoored)
+
+Samba smbd 3.x (vulnerable to usermap exploit)
+
+Telnet allowing default credentials
+
+
+
+6. Web Interface Check:
+
+The HTTP service was accessed from the browser using:
+
+http://192.168.56.102
+
+It revealed links to DVWA, Mutillidae, and possible CGI paths.
+
+
+
+7. Vulnerability Research:
+
+Identified services were matched with known CVEs for targeted exploitation.
